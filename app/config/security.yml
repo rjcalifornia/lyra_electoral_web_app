@@ -1,0 +1,67 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+        
+    role_hierarchy:
+        ROLE_VIGILANTE: ROLE_USER
+        ROLE_REPORTE: ROLE_USER
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:        
+        chain_provider:
+            chain:
+                providers: [in_memory, fos_userbundle]
+        in_memory:
+            memory:
+                users:
+                    superadmin:
+                        password: 'superadminpw'
+                        roles: ['ROLE_SUPER_ADMIN']
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+            
+        api_login:
+            pattern:  ^/api/auth/login
+            stateless: true
+            anonymous: true
+            json_login:
+                provider: fos_userbundle
+                check_path:               /api/auth/login
+                success_handler:          lexik_jwt_authentication.handler.authentication_success
+                failure_handler:          lexik_jwt_authentication.handler.authentication_failure
+          #  provider: chain_provider
+        
+
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+
+            logout:       true
+            anonymous:    true
+            
+    access_control:
+        - { path: ^/api, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: ROLE_ADMIN }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/, role: [ROLE_ADMIN, ROLE_REPORTE, ROLE_VIGILANTE] }
+        
+
+lexik_jwt_authentication:
+    secret_key: %kernel.project_dir%/app/config/jwt/private.pem
+    public_key: %kernel.project_dir%/app/config/jwt/public.pem
+    pass_phrase: 1234
+    token_ttl: 7200                           # default is 3600 seconds

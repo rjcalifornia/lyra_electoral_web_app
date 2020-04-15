@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Resultados/graficos.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Procesos/procesados.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Inicio/dashboard.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/README.md</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Usuarios/nuevo.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Inicio/inicio.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Controller/ResultadosController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Usuarios/editar.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Repository/Acta_presidencialRepository.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Procesos/seleccion.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Presidencial/agregar-acta-presidencial.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Controller/PresidencialController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Form/UsuarioType.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/app/config/security.yml</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Entity/Acta_presidencial.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Inicio/advertencia-acta-duplicada.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Form/Acta_presidencialType.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Entity/Jrv.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Resultados/tabla.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/app/Resources/views/layouts/sidebar.html.twig</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Controller/ProcesadasController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Controller/UsuariosController.php</file>
+            <file>file:/C:/xampp/htdocs/lyra_presidential/src/AppBundle/Resources/views/Usuarios/listado-general-usuarios.html.twig</file>
+        </group>
+    </open-files>
+</project-private>

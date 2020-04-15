@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Listado general de usuarios | Lyra Electoral App</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="{{ asset('assets/vendors/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+
+        <!-- Bootstrap Select Css -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Waves Effect Css -->
+    <link href="{{ asset('assets/vendors/node-waves/waves.css')}}" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="{{ asset('assets/vendors/animate-css/animate.css')}}" rel="stylesheet" />
+
+    <!-- Sweet Alert Css -->
+    <link href="{{ asset('assets/vendors/sweetalert/sweetalert.css')}}" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="{{ asset('assets/vendors/css/style.css')}}" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="{{ asset('assets/vendors/css/themes/all-themes.css')}}" rel="stylesheet" />
+    
+    <link href="{{ asset('assets/vendors/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css')}}" rel="stylesheet">
+    
+</head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+   
+    <!-- #END# Search Bar -->
+      {% include 'layouts/topbar.html.twig' %}
+    <section>
+        {% include 'layouts/sidebar.html.twig' %}
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+           
+
+            <!-- Vertical Layout -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Listado general de usuarios
+                            </h2>
+                          
+                        </div>
+                        <div class="body">
+                             <div class="table-responsive">
+                                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                   
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                    <thead>
+                                        <th>#</th>
+                                        <th>Usuario </th>
+                                            
+                                         <th>Correo</th>
+                                        
+                                         <th>Tipo de cuenta</th>
+                                        
+                                        <th>Opciones</th>
+                                        
+                                           </thead>
+                                    
+                                    <tbody>
+                                       {%set counter = 0 %} 
+                                        
+                                        
+                                       {%for u in data.usuarios%} 
+                                        {%set counter = counter + 1%}
+                                    <tr>
+                                        
+                                            <td>{{counter}}</td>
+                                            <td>{{u.username}}</td>
+                                            <td>{{u.email}}</td>
+                                            
+                                            <td>
+                                                {%for t in u.roles%}
+                                                    
+                                                    {%if t == 'ROLE_SUPER_ADMIN'%}
+                                                        Administrador General
+                                                    {%endif%}
+                                                    
+                                                    {%if t == 'ROLE_ADMIN'%}
+                                                        Administrador de sistema
+                                                    {%endif%}
+                                                    
+                                                    {%if t == 'ROLE_VIGILANTE'%}
+                                                        Transmision de datos
+                                                    {%endif%}
+                                                    
+                                                    {%if t == 'ROLE_REPORTE'%}
+                                                        Reporte de resultados
+                                                    {%endif%}
+                                                    
+                                                    
+                                                {%endfor%}
+                                            </td>
+                                            
+                                            <td>
+                                                <a href="{{path('editar_usuario_sistema', {'usuarioid': u.id })}}">
+                              <button type="button" class="btn btn-info btn-xs">
+                                  Editar usuario
+                              </button> 
+                              </a>
+                                                
+                                            </td>
+                                            
+                                        </tr>
+                                        
+                                        {%endfor%}
+                                    </tbody>
+                                </table></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Vertical Layout -->
+  
+            
+           
+          
+           
+          
+        </div>
+    </section>
+
+    <!-- Jquery Core Js -->
+    <script src="{{ asset('assets/vendors/jquery/jquery.min.js')}}"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="{{ asset('assets/vendors/bootstrap/js/bootstrap.js')}}"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="{{ asset('assets/vendors/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="{{ asset('assets/vendors/node-waves/waves.js')}}"></script>
+
+
+    <!-- Demo Js -->
+    <script src="{{ asset('assets/vendors/js/demo.js')}}"></script>
+    <script>
+    $(document).ready(function() {
+    $('.select4').select2();
+});
+    </script>
+    
+     <!-- Jquery DataTable Plugin Js -->
+    <script src="{{ asset('assets/vendors/jquery-datatable/jquery.dataTables.js')}}"></script>
+    <script src="{{ asset('assets/vendors/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')}}"></script>
+    <script src="{{ asset('assets/vendors/jquery-datatable/extensions/export/dataTables.buttons.min.js')}}"></script>
+    <script src="{{ asset('assets/vendors/jquery-datatable/extensions/export/buttons.flash.min.js')}}"></script>
+    <script src="{{ asset('assets/vendors/jquery-datatable/extensions/export/jszip.min.js')}}"></script>
+    <script src="{{ asset('assets/vendors/jquery-datatable/extensions/export/pdfmake.min.js')}}"></script>
+    <script src="{{ asset('assets/vendors/jquery-datatable/extensions/export/vfs_fonts.js')}}"></script>
+    <script src="{{ asset('assets/vendors/jquery-datatable/extensions/export/buttons.html5.min.js')}}"></script>
+    <script src="{{ asset('assets/vendors/jquery-datatable/extensions/export/buttons.print.min.js')}}"></script>
+    
+        <!-- Custom Js -->
+    <script src="{{ asset('assets/vendors/js/admin.js')}}"></script>
+
+        <script src="{{ asset('assets/vendors/js/pages/tables/jquery-datatable.js')}}"></script>
+
+</body>
+
+</html>
