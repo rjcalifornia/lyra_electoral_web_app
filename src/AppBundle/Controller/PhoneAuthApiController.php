@@ -42,7 +42,8 @@ class PhoneAuthApiController extends Controller
                      "code" => "200",
                      "message" => "Dispositivo autorizado para transmitir"
                  ]);
-                    break;
+                    break; 
+                
                 
                 case false:
                     $responseArray = ([

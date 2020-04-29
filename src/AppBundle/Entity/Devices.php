@@ -26,7 +26,7 @@ class Devices
      *
      * @ORM\Column(name="deviceid", type="string", length=400, nullable=true)
      */
-    private $deviceid;
+    private $deviceid; 
 
     /**
      * @var string|null

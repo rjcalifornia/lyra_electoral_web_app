@@ -171,6 +171,7 @@ class LyraApiController extends Controller
                                 "message" => "Datos guardados correctamente",
                             );
          
+         
          return new JsonResponse($responseArray);
         }
         else{

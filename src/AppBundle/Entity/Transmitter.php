@@ -49,7 +49,7 @@ class Transmitter
      * @ORM\Column(name="addedby", type="string", length=500, nullable=true)
      */
     private $addedby;
-
+ 
 
     /**
      * Get id.
