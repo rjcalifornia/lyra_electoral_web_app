@@ -1,6 +1,6 @@
 # Lyra Presidential App
 
-A critical web app for tracking elections results
+A critical web app for tracking elections results. This version is for handling only presidential elections. You can tweak it for your custom needs.
 
 ### Prerequisites
 
