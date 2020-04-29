@@ -120,6 +120,36 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
                 }
                 not_show_resultss_api:
 
+                // api_auth_request
+                if ('/api/resources/authentication/request' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\PhoneAuthApiController::RequestAuthenticationAction',  '_route' => 'api_auth_request',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not_api_auth_request;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'api_auth_request'));
+                    }
+
+                    return $ret;
+                }
+                not_api_auth_request:
+
+                // api_auth_check
+                if ('/api/resources/authentication/check-device' === $trimmedPathinfo) {
+                    $ret = array (  '_controller' => 'AppBundle\\Controller\\PhoneAuthApiController::CheckDeviceAction',  '_route' => 'api_auth_check',);
+                    if ('/' === substr($pathinfo, -1)) {
+                        // no-op
+                    } elseif ('GET' !== $canonicalMethod) {
+                        goto not_api_auth_check;
+                    } else {
+                        return array_replace($ret, $this->redirect($rawPathinfo.'/', 'api_auth_check'));
+                    }
+
+                    return $ret;
+                }
+                not_api_auth_check:
+
             }
 
             // api_auth_login

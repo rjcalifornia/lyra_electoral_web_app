@@ -600,6 +600,9 @@
     <service id="AppBundle\Controller\LyraApiController" class="AppBundle\Controller\LyraApiController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="AppBundle\Controller\PhoneAuthApiController" class="AppBundle\Controller\PhoneAuthApiController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
     <service id="AppBundle\Controller\PresidencialController" class="AppBundle\Controller\PresidencialController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
@@ -4720,6 +4723,8 @@
     <service id="abstract.instanceof.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\LyraApiController" class="AppBundle\Controller\LyraApiController" public="true" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\LyraApiController" class="AppBundle\Controller\LyraApiController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\PhoneAuthApiController" class="AppBundle\Controller\PhoneAuthApiController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\PhoneAuthApiController" class="AppBundle\Controller\PhoneAuthApiController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\PresidencialController" class="AppBundle\Controller\PresidencialController" public="true" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\PresidencialController" class="AppBundle\Controller\PresidencialController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\ProcesadasController" class="AppBundle\Controller\ProcesadasController" public="true" autowire="true" abstract="true"/>
