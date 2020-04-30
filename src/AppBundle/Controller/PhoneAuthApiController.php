@@ -27,11 +27,7 @@ class PhoneAuthApiController extends Controller
         
         $deviceId = $data['device_id'];
         $phoneNumber = $data['phone_number'];
-        
-        // Get Entity manager and repository
-       // $em = $this->getDoctrine()->getManager();
-//        $transmitterRepository = $em->getRepository("AppBundle:Transmitter");
-        
+          
         if($deviceId != null && $phoneNumber != null)
             {
             $validation = $this->validateDevice($deviceId, $phoneNumber);
@@ -56,24 +52,6 @@ class PhoneAuthApiController extends Controller
                     break;
             }
             
-                
-
-                // Search the neighborhoods that belongs to the city with the given id as GET parameter "cityid"
-         //       $centers = $centersRepository->createQueryBuilder("q")
-           //         ->getQuery()
-             //       ->getResult();
-
-                // Serialize into an array the data that we need, in this case only name and id
-                // Note: you can use a serializer as well, for explanation purposes, we'll do it manually
-     /*           $responseArray = array();
-                foreach($centers as $obj){
-                    $responseArray[] = array(
-                        "id" => $obj->getId(),
-                        "name" => $obj->getNombrecentro()
-                    );
-                }
-*/
-                // Return array with structure of the neighborhoods of the providen city id
                 return new JsonResponse($responseArray);
             }
              
@@ -126,28 +104,7 @@ class PhoneAuthApiController extends Controller
             ]);
                 break;
         }
-       /* 
-        if($findDevice == '200')
-            {
-            $responseArray = ([
-                "code" => '200',
-                "status" => "allowed"
-            ]);
-            
-            return new JsonResponse($responseArray);
-
-            }
-            else
-                {
-                    $responseArray = ([
-                        "code" => 403,
-                        "status" => "allowed"
-                    ]);
-            
-            return new JsonResponse($responseArray);
-                }
-        * 
-        */
+    
          return new JsonResponse($responseArray);
     }    
     
