@@ -170,6 +170,9 @@
       <parameter key="ROLE_VIGILANTE" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
+      <parameter key="ROLE_DEVICES" type="collection">
+        <parameter>ROLE_USER</parameter>
+      </parameter>
       <parameter key="ROLE_REPORTE" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
@@ -595,6 +598,9 @@
     <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" public="true" synthetic="true"/>
     <service id="AppBundle\AppBundle" class="AppBundle\AppBundle" public="false" autowire="true" autoconfigure="true"/>
     <service id="AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="AppBundle\Controller\DevicesController" class="AppBundle\Controller\DevicesController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
     <service id="AppBundle\Controller\LyraApiController" class="AppBundle\Controller\LyraApiController" public="true" autowire="true" autoconfigure="true">
@@ -2540,6 +2546,7 @@
           <argument>ROLE_ADMIN</argument>
           <argument>ROLE_REPORTE</argument>
           <argument>ROLE_VIGILANTE</argument>
+          <argument>ROLE_DEVICES</argument>
         </argument>
         <argument>null</argument>
       </call>
@@ -4721,6 +4728,8 @@
     </service>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\DevicesController" class="AppBundle\Controller\DevicesController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\DevicesController" class="AppBundle\Controller\DevicesController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\LyraApiController" class="AppBundle\Controller\LyraApiController" public="true" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\LyraApiController" class="AppBundle\Controller\LyraApiController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\PhoneAuthApiController" class="AppBundle\Controller\PhoneAuthApiController" public="true" autowire="true" abstract="true"/>

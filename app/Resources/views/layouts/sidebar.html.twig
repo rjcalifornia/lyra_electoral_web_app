@@ -24,6 +24,16 @@
                         </a>
                              {%endif%}
                     </li>
+                    {%if is_granted('ROLE_DEVICES')%}
+                    <li class="active">
+                         
+                        <a href="{{ path('homepage')}}">
+                            <i class="material-icons">home</i>
+                            <span>Inicio</span>
+                        </a>
+                             
+                    </li>
+                    {%endif%}
                    
                    {#<li>
                         <a href="pages/typography.html">

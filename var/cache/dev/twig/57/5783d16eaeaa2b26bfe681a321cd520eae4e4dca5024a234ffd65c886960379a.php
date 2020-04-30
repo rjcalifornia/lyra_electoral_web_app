@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* :layouts:sidebar.html.twig */
+/* layouts/sidebar.html.twig */
 class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a2005651dc3 extends \Twig\Template
 {
     private $source;
@@ -34,10 +34,10 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", ":layouts:sidebar.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "layouts/sidebar.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", ":layouts:sidebar.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "layouts/sidebar.html.twig"));
 
         // line 1
         echo "<!-- Left Sidebar -->
@@ -73,15 +73,33 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
         }
         // line 26
         echo "                    </li>
-                   
+                    ";
+        // line 27
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_DEVICES")) {
+            // line 28
+            echo "                    <li class=\"active\">
+                         
+                        <a href=\"";
+            // line 30
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("homepage");
+            echo "\">
+                            <i class=\"material-icons\">home</i>
+                            <span>Inicio</span>
+                        </a>
+                             
+                    </li>
+                    ";
+        }
+        // line 37
+        echo "                   
                    ";
-        // line 40
+        // line 50
         echo "                   ";
         if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_REPORTE") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
-            // line 41
+            // line 51
             echo "                    <li>
                         <a href=\"";
-            // line 42
+            // line 52
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ver_resultados_presidenciales");
             echo "\">
                             <i class=\"material-icons\">equalizer</i>
@@ -92,7 +110,7 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
                     
                     <li>
                         <a href=\"";
-            // line 50
+            // line 60
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ver_resultados_presidenciales_tabla");
             echo "\">
                             <i class=\"material-icons\">widgets</i>
@@ -106,7 +124,7 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
                     
                     <li>
                         <a href=\"";
-            // line 61
+            // line 71
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jrv_seleccion");
             echo "\">
                             <i class=\"material-icons\">important_devices</i>
@@ -116,13 +134,13 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
                     </li>
                     ";
         }
-        // line 68
+        // line 78
         echo "                     ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 69
+            // line 79
             echo "                     <li>
                         <a href=\"";
-            // line 70
+            // line 80
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("usuarios_sistema_listado_general");
             echo "\">
                             <i class=\"material-icons\">accessibility</i>
@@ -133,7 +151,7 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
                     
                     <li>
                         <a href=\"";
-            // line 78
+            // line 88
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("crear_nuevo_usuario");
             echo "\">
                             <i class=\"material-icons\">perm_contact_calendar</i>
@@ -145,11 +163,11 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
                     
                    ";
         }
-        // line 87
+        // line 97
         echo "                    
                     <li>
                         <a href=\"";
-        // line 89
+        // line 99
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
         echo "\">
                             <i class=\"material-icons\">swap_calls</i>
@@ -182,7 +200,7 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
 
     public function getTemplateName()
     {
-        return ":layouts:sidebar.html.twig";
+        return "layouts/sidebar.html.twig";
     }
 
     public function isTraitable()
@@ -192,7 +210,7 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
 
     public function getDebugInfo()
     {
-        return array (  153 => 89,  149 => 87,  137 => 78,  126 => 70,  123 => 69,  120 => 68,  110 => 61,  96 => 50,  85 => 42,  82 => 41,  79 => 40,  75 => 26,  66 => 21,  64 => 20,  43 => 1,);
+        return array (  171 => 99,  167 => 97,  155 => 88,  144 => 80,  141 => 79,  138 => 78,  128 => 71,  114 => 60,  103 => 52,  100 => 51,  97 => 50,  94 => 37,  84 => 30,  80 => 28,  78 => 27,  75 => 26,  66 => 21,  64 => 20,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -223,6 +241,16 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
                         </a>
                              {%endif%}
                     </li>
+                    {%if is_granted('ROLE_DEVICES')%}
+                    <li class=\"active\">
+                         
+                        <a href=\"{{ path('homepage')}}\">
+                            <i class=\"material-icons\">home</i>
+                            <span>Inicio</span>
+                        </a>
+                             
+                    </li>
+                    {%endif%}
                    
                    {#<li>
                         <a href=\"pages/typography.html\">
@@ -305,6 +333,6 @@ class __TwigTemplate_5be34f2ee08160baffcb2a560f18e207526f88149b520e89c7115a20056
             </div>
             <!-- #Footer -->
         </aside>
-        <!-- #END# Left Sidebar -->", ":layouts:sidebar.html.twig", "/var/www/html/lyra/app/Resources/views/layouts/sidebar.html.twig");
+        <!-- #END# Left Sidebar -->", "layouts/sidebar.html.twig", "/var/www/html/lyra/app/Resources/views/layouts/sidebar.html.twig");
     }
 }

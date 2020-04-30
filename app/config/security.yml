@@ -6,6 +6,7 @@ security:
         
     role_hierarchy:
         ROLE_VIGILANTE: ROLE_USER
+        ROLE_DEVICES: ROLE_USER
         ROLE_REPORTE: ROLE_USER
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: ROLE_ADMIN
@@ -57,7 +58,7 @@ security:
         - { path: ^/register, role: ROLE_ADMIN }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
-        - { path: ^/, role: [ROLE_ADMIN, ROLE_REPORTE, ROLE_VIGILANTE] }
+        - { path: ^/, role: [ROLE_ADMIN, ROLE_REPORTE, ROLE_VIGILANTE, ROLE_DEVICES] }
         
 
 lexik_jwt_authentication:

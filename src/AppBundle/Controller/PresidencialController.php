@@ -1,7 +1,7 @@
 <?php
 
 namespace AppBundle\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,6 +13,7 @@ class PresidencialController extends Controller
 {
     /**
      * @Route("/agregar-acta-presidencial/", name="agregar_acta_presidencial")
+     * @Security("has_role('ROLE_ADMIN') or has_role('ROLE_VIGILANTE') or has_role('ROLE_REPORTE')")
      */
     public function AgregarActaConcejoAction(Request $request)
     {   

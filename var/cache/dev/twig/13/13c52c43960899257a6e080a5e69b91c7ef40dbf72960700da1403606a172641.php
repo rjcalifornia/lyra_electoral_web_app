@@ -178,11 +178,50 @@ class __TwigTemplate_59d2df8a3873dc063bf3fd515c1de42065cd759d7c66dee7af42b7a97ce
         }
         // line 98
         echo "                    
+                    ";
+        // line 99
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_DEVICES")) {
+            // line 100
+            echo "                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12\">
+                   <a href=\"";
+            // line 101
+            echo "\" style=\"text-decoration:none\">
+                    <div class=\"info-box bg-pink hover-expand-effect\">
+                        <div class=\"icon\">
+                            <i class=\"material-icons\">playlist_add_check</i>
+                        </div>
+                        <div class=\"content\">
+                            <div class=\"text\">Agregar transmisor</div>
+                              </div>
+                    </div>
+                    </a>
+                </div>
+                    
+                    <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12\">
+                   <a href=\"";
+            // line 114
+            echo "\" style=\"text-decoration:none\">
+                    <div class=\"info-box bg-pink hover-expand-effect\">
+                        <div class=\"icon\">
+                            <i class=\"material-icons\">playlist_add_check</i>
+                        </div>
+                        <div class=\"content\">
+                            <div class=\"text\">Administraci&oacute;n de transmisores</div>
+                              </div>
+                    </div>
+                    </a>
+                </div>
+                    
                     
                     ";
-        // line 100
+        }
+        // line 128
+        echo "                    
+                    
+                    ";
+        // line 130
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_REPORTE")) {
-            // line 101
+            // line 131
             echo "                <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">
                      </br>
                     <center>
@@ -192,9 +231,9 @@ class __TwigTemplate_59d2df8a3873dc063bf3fd515c1de42065cd759d7c66dee7af42b7a97ce
                 </div>
                     ";
         }
-        // line 109
+        // line 139
         echo "                ";
-        // line 121
+        // line 151
         echo "              </div>
             </div>
             <!-- #END# Widgets -->
@@ -206,44 +245,44 @@ class __TwigTemplate_59d2df8a3873dc063bf3fd515c1de42065cd759d7c66dee7af42b7a97ce
 
     <!-- Jquery Core Js -->
     <script src=\"";
-        // line 131
+        // line 161
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Bootstrap Core Js -->
     <script src=\"";
-        // line 134
+        // line 164
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/bootstrap/js/bootstrap.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Select Plugin Js -->
     <script src=\"";
-        // line 137
+        // line 167
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/bootstrap-select/js/bootstrap-select.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Slimscroll Plugin Js -->
     <script src=\"";
-        // line 140
+        // line 170
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/jquery-slimscroll/jquery.slimscroll.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Waves Effect Plugin Js -->
     <script src=\"";
-        // line 143
+        // line 173
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/node-waves/waves.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Jquery CountTo Plugin Js -->
     <script src=\"";
-        // line 146
+        // line 176
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/jquery-countto/jquery.countTo.js"), "html", null, true);
         echo "\"></script>
 
     
     <!-- ChartJs -->
     <script src=\"";
-        // line 150
+        // line 180
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/chartjs/Chart.bundle.js"), "html", null, true);
         echo "\"></script>
 
@@ -251,14 +290,14 @@ class __TwigTemplate_59d2df8a3873dc063bf3fd515c1de42065cd759d7c66dee7af42b7a97ce
     
     <!-- Custom Js -->
     <script src=\"";
-        // line 155
+        // line 185
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/js/admin.js"), "html", null, true);
         echo "\"></script>
   
 
     <!-- Demo Js -->
     <script src=\"";
-        // line 159
+        // line 189
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/js/demo.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -284,7 +323,7 @@ class __TwigTemplate_59d2df8a3873dc063bf3fd515c1de42065cd759d7c66dee7af42b7a97ce
 
     public function getDebugInfo()
     {
-        return array (  262 => 159,  255 => 155,  247 => 150,  240 => 146,  234 => 143,  228 => 140,  222 => 137,  216 => 134,  210 => 131,  198 => 121,  196 => 109,  186 => 101,  184 => 100,  180 => 98,  165 => 86,  162 => 85,  160 => 84,  150 => 80,  143 => 75,  139 => 74,  123 => 60,  121 => 59,  117 => 57,  115 => 56,  87 => 31,  81 => 28,  73 => 23,  67 => 20,  61 => 17,  43 => 1,);
+        return array (  301 => 189,  294 => 185,  286 => 180,  279 => 176,  273 => 173,  267 => 170,  261 => 167,  255 => 164,  249 => 161,  237 => 151,  235 => 139,  225 => 131,  223 => 130,  219 => 128,  203 => 114,  188 => 101,  185 => 100,  183 => 99,  180 => 98,  165 => 86,  162 => 85,  160 => 84,  150 => 80,  143 => 75,  139 => 74,  123 => 60,  121 => 59,  117 => 57,  115 => 56,  87 => 31,  81 => 28,  73 => 23,  67 => 20,  61 => 17,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -385,6 +424,36 @@ class __TwigTemplate_59d2df8a3873dc063bf3fd515c1de42065cd759d7c66dee7af42b7a97ce
                     </div>
                     </a>
                 </div>
+                    {%endif%}
+                    
+                    {%if is_granted('ROLE_DEVICES')%}
+                <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12\">
+                   <a href=\"{#{ path('agregar_acta_presidencial')}#}\" style=\"text-decoration:none\">
+                    <div class=\"info-box bg-pink hover-expand-effect\">
+                        <div class=\"icon\">
+                            <i class=\"material-icons\">playlist_add_check</i>
+                        </div>
+                        <div class=\"content\">
+                            <div class=\"text\">Agregar transmisor</div>
+                              </div>
+                    </div>
+                    </a>
+                </div>
+                    
+                    <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12\">
+                   <a href=\"{#{ path('agregar_acta_presidencial')}#}\" style=\"text-decoration:none\">
+                    <div class=\"info-box bg-pink hover-expand-effect\">
+                        <div class=\"icon\">
+                            <i class=\"material-icons\">playlist_add_check</i>
+                        </div>
+                        <div class=\"content\">
+                            <div class=\"text\">Administraci&oacute;n de transmisores</div>
+                              </div>
+                    </div>
+                    </a>
+                </div>
+                    
+                    
                     {%endif%}
                     
                     

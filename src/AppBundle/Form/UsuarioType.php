@@ -73,6 +73,7 @@ class UsuarioType extends AbstractType
                     'Administrador' => 'ROLE_ADMIN',
                     'Reportes' => 'ROLE_REPORTE',
                     'Transmision' => 'ROLE_VIGILANTE',
+                    'Administrador de transmisores' => 'ROLE_DEVICES',
                     
                     ),
                     'expanded' => false,

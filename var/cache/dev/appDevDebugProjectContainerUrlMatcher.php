@@ -138,6 +138,21 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_acta_duplicada_error:
 
+            // administracion_agregar_transmisor
+            if ('/administracion/transmisores/agregar' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'AppBundle\\Controller\\DevicesController::AgregarTransmisoresAction',  '_route' => 'administracion_agregar_transmisor',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_administracion_agregar_transmisor;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'administracion_agregar_transmisor'));
+                }
+
+                return $ret;
+            }
+            not_administracion_agregar_transmisor:
+
             if (0 === strpos($pathinfo, '/api/resources')) {
                 // api_voting_centers
                 if ('/api/resources/voting-centers' === $trimmedPathinfo) {
